@@ -387,6 +387,22 @@ html[dir=rtl] .pillar .go{transform:translateX(8px)}
 html[dir=rtl] .pillar:hover .go{transform:translateX(0)}
 html[dir=rtl] h1.hero-title{line-height:1.25}
 html[dir=rtl] h2{line-height:1.45}
+
+/* ============ mobile hero fix (2026-06-11): compact centered mosaic band ============ */
+@media(max-width:880px){
+  header{min-height:100svh;padding:92px 7vw 64px}
+  .hero-mosaic{position:static;transform:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:0 auto 34px;max-width:430px}
+  .hero-mosaic .mcol{display:contents}
+  .hero-mosaic .mtile,.hero-mosaic .mtile.s,.hero-mosaic .mtile.m,.hero-mosaic .mtile.l{width:clamp(48px,14.5vw,64px);height:clamp(48px,14.5vw,64px);margin:0}
+  .hero-mosaic .mtile.solid .sic{width:24px;height:24px}
+  h1.hero-title{font-size:clamp(2.3rem,10.5vw,3.1rem)}
+  h1.hero-title .yr{font-size:clamp(3rem,13vw,4rem)}
+  .hero-sub{font-size:1rem}
+  .hero-logo{position:static;margin-top:36px}
+}
+@media(max-width:430px){
+  .hero-mosaic{gap:7px}
+}
 </style>
 </head>
 <body>
